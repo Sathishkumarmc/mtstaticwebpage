@@ -10,7 +10,7 @@ Skills Chart: Visualizes M. Sathish Kumar's proficiency in various programming l
 Responsiveness: The website adjusts its layout to ensure optimal viewing experience on various devices like desktops, tablets, and smartphones.
 Technologies Used:
 
-HTML: The building block for the webpage structure and content.
+HTML: The building block for the webpage structure and content.     
 CSS: Styles the webpage's visual elements like fonts, colors, layouts, and animations.
 JavaScript: Adds interactivity to the webpage through features like button clicks and section visibility control.
 Chart.js: A JavaScript library used to create the skills chart.
@@ -28,3 +28,10 @@ Feel free to clone this repository, make modifications to personalize the websit
 License
 
 This project is licensed under the MIT License. Refer to the LICENSE file for more details.
+ -----------AWS-----------
+ * for connecting it with the aws we have to use the s3 bucket for a static website
+ * for creating a s3 bucket we have to give the bucket a new name and then disable(block all public access ) options
+ * After disabling that options leave the remaining options as default and then create the bucket
+ * Then go to permission after creating a bucket and enable the static website option and give the buckets policy and cors(cross platform support)
+ * Then upload your html file in that bucket then use the public ipv4 link to visit your webpage
+ * this is mt webpage---https://statcticwebsite.s3.eu-north-1.amazonaws.com/index.html 
