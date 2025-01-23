@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - M. Sathish Kumar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #141E30, #243B55);
+      color: white;
+      overflow-x: hidden;
+      height: 100vh;
+    }
+
+    /* Hero Section */
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slideIn 1s ease-out;
+    }
+
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: #ddd;
+    }
+
+    .cta-button {
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 8px 15px rgba(255, 106, 0, 0.5);
+    }
+
+    /* Resume Section */
+    .resume-section {
+      display: none;
+      padding: 40px;
+      background: #1a2430;
+      border-radius: 8px;
+      margin: 50px auto;
+      width: 70%;
+      max-width: 900px;
+      animation: fadeInUp 1s ease-out;
+      text-align: left;
+      color: #ddd;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Boxed Content Style */
+    .resume-box {
+      background-color: #243B55;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+      border: 2px solid #ff6a00;
+    }
+
+    .resume-box h3 {
+      font-size: 1.4rem;
+      color: #ff6a00;
+      margin-bottom: 15px;
+    }
+
+    .resume-box ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .resume-box ul li {
+      margin-bottom: 10px;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .resume-box ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #ff6a00;
+    }
+
+    .resume-box p {
+      font-size: 1.1rem;
+    }
+
+    /* Back Button */
+    .back-button {
+      background-color: #ff6a00;
+      padding: 15px 30px;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      text-transform: uppercase;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .back-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 8px 15px rgba(255, 106, 0, 0.5);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Media Queries for Responsiveness */
+    @media screen and (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+
+      .cta-button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+      }
+
+      .back-button {
+        padding: 12px 25px;
+      }
+
+      .resume-section {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .resume-section h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero-content" id="heroSection">
+    <h1>Welcome to My Personal Web Page</h1>
+    <p>I'm M. Sathish Kumar, a Computer Science student at KCG College of Technology</p>
+    <button class="cta-button" onclick="showResumeSection()">View Resume</button>
+  </div>
+
+  <!-- Resume Section -->
+  <div class="resume-section" id="resumeSection">
+    <h1>Resume</h1>
+
+    <!-- Contact Info Box -->
+    <div class="resume-box">
+      <h3>Contact Information:</h3>
+      <p><strong>Name:</strong> M. Sathish Kumar</p>
+      <p><strong>Age:</strong> 19</p>
+      <p><strong>Email:</strong> sathishkumarmc007@gmail.com</p>
+      <p><strong>Phone:</strong> 9361229771</p>
+    </div>
+
+    <!-- Competitions & Achievements Box -->
+    <div class="resume-box">
+      <h3>Competitions & Achievements:</h3>
+      <ul>
+        <li>Smart India Hackathon</li>
+        <li>UI/UX Design, VIT</li>
+        <li>Innothon 24, KCG College of Technology - Special Jury Award Winner with ₹2500</li>
+        <li>SIOMATS (National Level Technical Quiz), Savitha Engineering College - Runner-Up</li>
+        <li>Vivanta 24, KCG College of Technology</li>
+        <li>ThinkUp Ideathon, VIT</li>
+        <li>Pitch Perfect, KCG College of Technology</li>
+      </ul>
+    </div>
+
+    <!-- Projects Box -->
+    <div class="resume-box">
+      <h3>Projects:</h3>
+      <ul>
+        <li>SOS App - An app where users can add important contacts, and pressing the SOS button sends an emergency message with location to those contacts</li>
+        <li>Brain Tumor Detection - Built using GitHub and Google Colab with AI and ML</li>
+        <li>Bike Monitoring Web Application - Tracks bike mileage and suggests maintenance tasks</li>
+        <li>AWS Static Website Hosting - Hosted my personal resume and details on AWS</li>
+        <li>AI-based Website Creation for "MOHAN STORE" - Using ChatGPT for prompts and Bolt.New for website creation (Currently in testing stage)</li>
+        <li>Solved over 20 problems in Code Ninja</li>
+      </ul>
+    </div>
+
+    <!-- Skills Chart -->
+    <div class="resume-box">
+      <h3>Skills & Technologies:</h3>
+      <canvas id="skillsChart" width="400" height="400"></canvas>
+    </div>
+
+    <!-- Future Goals Box -->
+    <div class="resume-box">
+      <h3>What's Next:</h3>
+      <p>I'm currently focusing on learning <strong>Terraform</strong>, a tool for automating cloud infrastructure and managing resources efficiently. I am excited to dive into this tool and enhance my cloud computing skills.</p>
+    </div>
+
+    <!-- Back Button -->
+    <button class="back-button" onclick="goBack()">Back</button>
+  </div>
+
+  <script>
+    // Show Resume Section
+    function showResumeSection() {
+      document.getElementById('heroSection').style.display = 'none'; // Hide hero section
+      document.getElementById('resumeSection').style.display = 'block'; // Show resume section
+    }
+
+    // Go Back to Hero Section
+    function goBack() {
+      document.getElementById('resumeSection').style.display = 'none'; // Hide resume section
+      document.getElementById('heroSection').style.display = 'block'; // Show hero section
+    }
+
+    // Create the skills chart
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    const skillsChart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ['Python', 'AWS', 'Cloud Computing', 'GitHub', 'Google Colab', 'Terraform'],
+        datasets: [{
+          label: 'Skills Proficiency',
+          data: [90, 85, 80, 70, 75, 60], // Example data, you can adjust this based on your proficiency
+          backgroundColor: 'rgba(255, 106, 0, 0.3)',
+          borderColor: '#ff6a00',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        scale: {
+          ticks: {
+            beginAtZero: true,
+            max: 100,
+            stepSize: 20
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
