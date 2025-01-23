@@ -1,4 +1,4 @@
-M. Sathish Kumar's Personal Website
+M. Sathish Kumar's Personal Website :)
 
 This repository contains the code for a static webpage showcasing M. Sathish Kumar's skills and experience as a computer science student. The website is built using HTML, CSS, and JavaScript and can be deployed on AWS services like Amazon S3 for hosting.
 
